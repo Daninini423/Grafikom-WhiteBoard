@@ -8,15 +8,15 @@ using namespace std;
 #endif
 
 // Kamera (polar)
-float camAngleY = 0.0f;
-float camAngleX = 15.0f;
+float camAngleY = 15.0f;
+float camAngleX = 0.0f;
 float camDist = 5.0f;  // Jarak kamera (dipakai untuk zoom)
 
 // Gelombang
 float wavePhase = 0.0f;
 float waveSpeed = 0.04f;
 float waveAmplitude = 0.025f;
-float waveYoffset = 0.25f;
+float waveYoffset = 1.0f;
 
 // Lighting
 bool light0On = true;
@@ -31,8 +31,8 @@ void setupLighting() {
     glEnable(GL_LIGHTING);
 
     GLfloat globalAmb[] = { 0.25f, 0.25f, 0.25f, 1.0f };
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalAmb);
-    glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globalAmb);             // fv (float (vector) 
+    glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);           // i (integer)
 
     GLfloat light0Pos[] = { 3.0f, 4.0f, 3.0f, 1.0f };
     GLfloat lightAmb[] = { 0.1f, 0.1f, 0.1f, 1.0f };
@@ -203,6 +203,10 @@ void keyboardDown(unsigned char key, int, int) {
     else if (key == '[') waveAmplitude -= 0.005f;
     else if (key == ']') waveAmplitude += 0.005f;
 
+    else if (key == 'l' || key == 'L') {
+        light0On = !light0On;  // toggle light
+    }
+        
     else if (key == 27) exit(0);
 }
 
