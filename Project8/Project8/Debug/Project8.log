@@ -1,3 +1,7 @@
 ﻿  GrafikaKomputer.cpp
-C:\Users\Dani Firdaus\source\repos\Project8\Project8\GrafikaKomputer.cpp(207,52): warning C4305: '-=': truncation from 'double' to 'float'
+C:\Users\Dani Firdaus\source\repos\Project8\Project8\GrafikaKomputer.cpp(141,34): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dani Firdaus\source\repos\Project8\Project8\GrafikaKomputer.cpp(159,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dani Firdaus\source\repos\Project8\Project8\GrafikaKomputer.cpp(160,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dani Firdaus\source\repos\Project8\Project8\GrafikaKomputer.cpp(161,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dani Firdaus\source\repos\Project8\Project8\GrafikaKomputer.cpp(176,46): warning C4305: '-=': truncation from 'double' to 'float'
   Project8.vcxproj -> C:\Users\Dani Firdaus\source\repos\Project8\Debug\Project8.exe
